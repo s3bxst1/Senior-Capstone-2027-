@@ -1,4 +1,4 @@
-@'
+
 <h1 align="center">SupportSnap</h1>
 <p align="center"><em>Evidence-based Windows diagnostics for IT technicians.</em></p>
 
