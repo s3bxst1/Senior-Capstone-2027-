@@ -75,55 +75,7 @@ Tracked in [Milestones](../../milestones). Feature freeze: **March 14**, final d
 University of Cincinnati - School of Information Technology - Senior Design 2026-2027
 '@ | Set-Content README.md -Encoding utf8
 
-# ---------- .gitignore ----------
-@'
-__pycache__/
-*.pyc
-.venv/
-venv/
-.env
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-build/
-dist/
-*.spec
-*.egg-info/
-.vscode/
-.idea/
-# Real scan output can contain sensitive data
-/reports-output/
-*.scan.json
-'@ | Set-Content .gitignore -Encoding utf8
 
-# ---------- LICENSE (MIT; change if your advisor/university requires otherwise) ----------
-$year = (Get-Date).Year
-@"
-MIT License
-
-Copyright (c) $year Sean Brennan, Seth Colby, Sebastian Tovar
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"@ | Set-Content LICENSE -Encoding utf8
-
-# ---------- Templates ----------
-@'
 ## What changed
 <!-- One or two sentences -->
 
