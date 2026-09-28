@@ -1,32 +1,3 @@
-# SupportSnap repo bootstrap
-# Prereqs: git and GitHub CLI (winget install GitHub.cli), then run: gh auth login
-# Usage:   .\setup-supportsnap-repo.ps1            (private repo, recommended until ready)
-#          .\setup-supportsnap-repo.ps1 -Public
-
-param(
-    [string]$RepoName = "SupportSnap",
-    [switch]$Public
-)
-
-$ErrorActionPreference = "Stop"
-$visibility = if ($Public) { "--public" } else { "--private" }
-
-New-Item -ItemType Directory -Force -Path $RepoName | Out-Null
-Set-Location $RepoName
-git init -b main
-
-# ---------- Folder structure ----------
-$dirs = @(
-    "src/supportsnap/collectors", "src/supportsnap/engine", "src/supportsnap/ui",
-    "src/supportsnap/reports", "powershell", "baselines", "tests",
-    "lab/fault-injection", "docs/design", "docs/decisions", ".github/ISSUE_TEMPLATE"
-)
-foreach ($d in $dirs) {
-    New-Item -ItemType Directory -Force -Path $d | Out-Null
-    if ($d -notlike ".github*") { New-Item -ItemType File -Force -Path "$d/.gitkeep" | Out-Null }
-}
-
-# ---------- README ----------
 @'
 <h1 align="center">SupportSnap</h1>
 <p align="center"><em>Evidence-based Windows diagnostics for IT technicians.</em></p>
