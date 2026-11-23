@@ -1,0 +1,130 @@
+{
+  "notice": "All device names, readings, and dates in this file are fictional demonstration data.",
+  "baseline_at": "2026-10-28T09:00:00",
+  "captured_at": "2026-11-09T09:00:00",
+  "fields": {
+    "wifi_driver": {
+      "label": "Wi-Fi driver version",
+      "category": "Drivers",
+      "unit": ""
+    },
+    "adapter_resets": {
+      "label": "Adapter reset events",
+      "category": "Event logs",
+      "unit": "events"
+    },
+    "startup_service": {
+      "label": "DemoSync startup service",
+      "category": "Services",
+      "unit": ""
+    },
+    "cpu_percent": {
+      "label": "CPU sample",
+      "category": "Performance",
+      "unit": "%"
+    },
+    "outlook_addin": {
+      "label": "DemoHelper Outlook add-in",
+      "category": "Software",
+      "unit": ""
+    },
+    "app_errors": {
+      "label": "Application error events",
+      "category": "Event logs",
+      "unit": "events"
+    },
+    "dns_server": {
+      "label": "DNS server setting",
+      "category": "Network",
+      "unit": ""
+    },
+    "disk_free_gib": {
+      "label": "Available storage",
+      "category": "Storage",
+      "unit": "GiB"
+    },
+    "disk_free_percent": {
+      "label": "Free storage percentage",
+      "category": "Storage",
+      "unit": "%"
+    }
+  },
+  "baseline": {
+    "wifi_driver": "1.0",
+    "adapter_resets": 0,
+    "startup_service": false,
+    "cpu_percent": 4,
+    "outlook_addin": false,
+    "app_errors": 0,
+    "dns_server": "192.0.2.53",
+    "disk_free_gib": 70,
+    "disk_free_percent": 35
+  },
+  "cases": {
+    "wifi": {
+      "label": "Demo: Wi-Fi drops and slow computer",
+      "description": "My laptop became slow and Wi-Fi started dropping after Tuesday. Outlook sometimes freezes.",
+      "tags": [
+        "Slow",
+        "Internet / Wi-Fi"
+      ],
+      "onset": "2026-11-03",
+      "changes": {
+        "wifi_driver": "2.0",
+        "adapter_resets": 7,
+        "startup_service": true,
+        "cpu_percent": 34,
+        "outlook_addin": true,
+        "dns_server": "192.0.2.54"
+      },
+      "change_dates": {
+        "wifi_driver": "2026-11-03",
+        "adapter_resets": "2026-11-03",
+        "startup_service": "2026-11-01",
+        "cpu_percent": "2026-11-09",
+        "outlook_addin": "2026-11-05",
+        "dns_server": "2026-10-30"
+      }
+    },
+    "storage": {
+      "label": "Demo: Low storage",
+      "description": "My computer is slow and I cannot finish saving a large project.",
+      "tags": [
+        "Slow"
+      ],
+      "onset": "2026-11-09",
+      "changes": {
+        "disk_free_gib": 5,
+        "disk_free_percent": 2.5
+      },
+      "change_dates": {
+        "disk_free_gib": "2026-11-09",
+        "disk_free_percent": "2026-11-09"
+      }
+    },
+    "healthy": {
+      "label": "Demo: No supported finding",
+      "description": "I want to check whether the available readings explain a slow computer.",
+      "tags": [
+        "Slow",
+        "Internet / Wi-Fi"
+      ],
+      "onset": "2026-11-03",
+      "changes": {},
+      "change_dates": {}
+    },
+    "missing": {
+      "label": "Demo: Missing evidence",
+      "description": "My Wi-Fi keeps dropping, but some diagnostic readings could not be collected.",
+      "tags": [
+        "Internet / Wi-Fi"
+      ],
+      "onset": "2026-11-03",
+      "changes": {
+        "wifi_driver": null,
+        "adapter_resets": null
+      },
+      "change_dates": {}
+    }
+  }
+}

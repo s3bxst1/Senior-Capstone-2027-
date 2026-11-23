@@ -1,0 +1,10 @@
+# Ignore Python bytecode cache folders.
+__pycache__/
+# Ignore compiled Python files.
+*.pyc
+# Ignore local virtual environments.
+.venv/
+# Ignore reviewed text reports containing real readings.
+LOCAL-*.txt
+# Ignore structured exports containing real readings.
+LOCAL-*.json
